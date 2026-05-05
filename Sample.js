@@ -31,3 +31,20 @@ console.log(arr); // Output: [1, 2, 2.5, 3, 4, 5]
 //Removing an element from a specific index
 arr.splice(2, 1);
 console.log(arr); // Output: [1, 2, 3, 4, 5]c
+
+//modification in code
+for (a of arr) {
+  console.log(a);
+}
+
+for (let i = 0; i < arr.length; i++) {
+  for (let j = i + 1; j < arr.length; j++) {
+    if (arr[i] > arr[j]) {
+      let temp = arr[i];
+      arr[i] = arr[j];
+      arr[j] = temp;
+    }
+  }
+}
+
+console.log(arr); // Output: [0, 1, 2, 2.5, 3, 4, 5, 6] (sorted array)
